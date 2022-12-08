@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "dc131004-d6a6-4445-bdce-100fdd18a511",
+		"name": "practica-jmontiel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"constrasena\": \"12345\",\r\n    \"estado\": true,\r\n    \"identificacion\": \"INE\",\r\n    \"edad\": 18,\r\n    \"genero\": \"HOMBRE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-cliente",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Lema Actualizado\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"constrasena\": \"12345\",\r\n    \"estado\": true,\r\n    \"identificacion\": \"INE\",\r\n    \"edad\": 18,\r\n    \"genero\": \"HOMBRE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/clientes/c0a1f74c-69ec-4783-aeac-f20c1cf30c7b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes",
+						"c0a1f74c-69ec-4783-aeac-f20c1cf30c7b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/clientes/544c7e38-fcfb-4605-923b-b5bdefde6c5d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes",
+						"544c7e38-fcfb-4605-923b-b5bdefde6c5d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": \"43214567\",\r\n    \"tipo\": \"CORRIENTE\",\r\n    \"saldoInicial\": \"200.00\",\r\n    \"estado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/c0a1f74c-69ec-4783-aeac-f20c1cf30c7b/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"c0a1f74c-69ec-4783-aeac-f20c1cf30c7b",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-cuenta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": \"123456789\",\r\n    \"tipo\": \"AHORRO\",\r\n    \"saldoInicial\": \"110.00\",\r\n    \"estado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/e268e78f-89a9-463c-8cc7-0caba029b80e/cuentas/ce7f5603-5460-42d8-8d83-a31592441499",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"e268e78f-89a9-463c-8cc7-0caba029b80e",
+						"cuentas",
+						"ce7f5603-5460-42d8-8d83-a31592441499"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-cuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/e268e78f-89a9-463c-8cc7-0caba029b80e/cuentas/76ea3a84-18cc-48cd-b112-c71c2aed5c2b-4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"e268e78f-89a9-463c-8cc7-0caba029b80e",
+						"cuentas",
+						"76ea3a84-18cc-48cd-b112-c71c2aed5c2b-4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-movimientos-por-cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2022-12-10\",\r\n    \"tipo\": \"CORRIENTE\",\r\n    \"valor\": \"-89.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/c0a1f74c-69ec-4783-aeac-f20c1cf30c7b/cuentas/ce7f5603-5460-42d8-8d83-a31592441499/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"c0a1f74c-69ec-4783-aeac-f20c1cf30c7b",
+						"cuentas",
+						"ce7f5603-5460-42d8-8d83-a31592441499",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reporte-movimientos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"10/2/2022\",\r\n    \"tipo\": \"AHORRO\",\r\n    \"valor\": \"100.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/e268e78f-89a9-463c-8cc7-0caba029b80e/reportes?fechaInicial=2022-12-10&fechaFinal=2022-12-11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"e268e78f-89a9-463c-8cc7-0caba029b80e",
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "fechaInicial",
+							"value": "2022-12-10"
+						},
+						{
+							"key": "fechaFinal",
+							"value": "2022-12-11"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
